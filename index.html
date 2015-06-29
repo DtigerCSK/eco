@@ -12,7 +12,7 @@
 <body>
 <!--Loading Screen-->
 <div id="loading" class="valign-wrapper">
-	<div class="preloader-wrapper big active valign center-align">
+	<div class="preloader-wrapper big active valign load">
 		<div class="spinner-layer spinner-blue-only">
 			<div class="circle-clipper left">
 				<div class="circle"></div>
@@ -60,6 +60,7 @@
 		</div>
 		<div class="col m6 s12">
 			<h4>Possible Options</h4>
+			<p>(Currently just examples)</p>
 			<div class="card blue-grey hoverable">
 				<div class="card-content white-text">
 					<span class="card-title">Full Save</span>
@@ -77,10 +78,10 @@
 </div>
 <footer class="page-footer light-blue darken-1" style="margin-top: 30%;">
 	<div class="container">
-		<div class="row">
+		<div class="row" style="margin-bottom:0px;">
 			<div class="col s12">
 				<h5 class="white-text">CSGO Economy</h5>
-				<p class="grey-text text-lighten-4">Note: While it is fairly accurate in possible options, this is not 100% guaranteed to be correct in buying options as there are a lot of variables in csgo that affect the economy.</p>
+				<p class="grey-text text-lighten-4">This site is not affiliated with Valve.</p>
 				<div class="divider"></div>
 				<ul>
 					<li><a href="http://DtigerCSK.com" class="white-text">DtigerCSK.com</a></li>
@@ -92,7 +93,9 @@
 </footer>
 <script>
 $(window).load(function(){
-    $('#loading').fadeOut();
+    $('#loading').fadeOut(1500);
+    $('.load').fadeOut(1000);
+    Materialize.toast('Non-functional right now, only base layout!', 20000);
 });
 //How do I even javascript lol
 </script>
