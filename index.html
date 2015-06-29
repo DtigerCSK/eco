@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSGO ECO</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="./custom.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+<!--Loading Screen-->
+<div id="loading" class="valign-wrapper">
+	<div class="preloader-wrapper big active valign center-align">
+		<div class="spinner-layer spinner-blue-only">
+			<div class="circle-clipper left">
+				<div class="circle"></div>
+			</div><div class="gap-patch">
+				<div class="circle"></div>
+			</div><div class="circle-clipper right">
+				<div class="circle"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Title Bar Shiet-->
+<div class="top-nav blue lighten-1 valign-wrapper">
+	<div class="container valign white-text">
+		<h1>CSGO Economy</h1>
+	</div>
+</div>
+<!--Body-->
+<div class="container">
+	<div class="row">
+		<div class="col m6 s12">
+			<div class="row">
+				<p>Enter in the following information</p>
+				<div class="input-field col s12">
+					<i class="fa fa-usd fa-3x prefix"></i>
+					<input id="money" type="number">
+					<label for="money">Money</label>
+				</div>
+			</div>
+			<div class="divider"></div>
+			<div class="row">
+				<div class="col s12">
+					<h5>Last Round(s) Outcome</h5>
+					<a class="col m6 s12 waves-effect waves-light btn green">Win</a>
+					<a class="col m6 s12 dropdown-button btn red" href="#" data-activates="loss" data-hover="true">Loss</a>
+					 <ul id="loss" class="dropdown-content">
+						<li><a href="#!">1 round</a></li>
+						<li><a href="#!">2 rounds</a></li>
+						<li><a href="#!">3 rounds</a></li>
+						<li><a href="#!">4 rounds</a></li>
+						<li><a href="#!">5+ rounds</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col m6 s12">
+			<h4>Possible Options</h4>
+			<div class="card blue-grey hoverable">
+				<div class="card-content white-text">
+					<span class="card-title">Full Save</span>
+					<p>Will be able to full buy the round after.</p>
+				</div>
+			</div>
+			<div class="card blue-grey hoverable">
+				<div class="card-content white-text">
+					<span class="card-title">Armor + Pistol</span>
+					<p>Saving at least $2000 will allow for a full buy the round after.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="page-footer light-blue darken-1" style="margin-top: 30%;">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<h5 class="white-text">CSGO Economy</h5>
+				<p class="grey-text text-lighten-4">Note: While it is fairly accurate in possible options, this is not 100% guaranteed to be correct in buying options as there are a lot of variables in csgo that affect the economy.</p>
+				<div class="divider"></div>
+				<ul>
+					<li><a href="http://DtigerCSK.com" class="white-text">DtigerCSK.com</a></li>
+					<li><a href="https://github.com/DtigerCSK" class="white-text">Github</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<script>
+$(window).load(function(){
+    $('#loading').fadeOut();
+});
+//How do I even javascript lol
+</script>
+</body>
+</html>
