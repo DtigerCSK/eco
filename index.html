@@ -7,23 +7,10 @@
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+	<script src="./eco.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
-<!--Loading Screen-->
-<div id="loading" class="valign-wrapper">
-	<div class="preloader-wrapper big active valign load">
-		<div class="spinner-layer spinner-blue-only">
-			<div class="circle-clipper left">
-				<div class="circle"></div>
-			</div><div class="gap-patch">
-				<div class="circle"></div>
-			</div><div class="circle-clipper right">
-				<div class="circle"></div>
-			</div>
-		</div>
-	</div>
-</div>
 <!--Title Bar Shiet-->
 <div class="top-nav blue lighten-1 valign-wrapper">
 	<div class="container valign white-text">
@@ -36,25 +23,63 @@
 		<div class="col m6 s12">
 			<div class="row">
 				<p>Enter in the following information</p>
+				<div class="col s12">
+					<button id="ct" onclick="ctTeam()" class="col m6 s12 btn blue">Counter-Terrorists</button>
+					<button id="t" onclick="tTeam()" class="col m6 s12 btn orange">Terrorists</button>
+				</div>
+			</div>
+			<div class="row">
 				<div class="input-field col s12">
 					<i class="fa fa-usd fa-3x prefix"></i>
-					<input id="money" type="number">
-					<label for="money">Money</label>
+					<input id="moneyInput" type="number">
+					<label for="moneyInput">Money</label>
 				</div>
 			</div>
 			<div class="divider"></div>
 			<div class="row">
 				<div class="col s12">
 					<h5>Last Round(s) Outcome</h5>
-					<a class="col m6 s12 waves-effect waves-light btn green">Win</a>
-					<a class="col m6 s12 dropdown-button btn red" href="#" data-activates="loss" data-hover="true">Loss</a>
-					 <ul id="loss" class="dropdown-content">
-						<li><a href="#!">1 round</a></li>
-						<li><a href="#!">2 rounds</a></li>
-						<li><a href="#!">3 rounds</a></li>
-						<li><a href="#!">4 rounds</a></li>
-						<li><a href="#!">5+ rounds</a></li>
+					<button onclick="win()" id="winButton" class="col m6 s12 waves-effect waves-light btn green">Win</button>
+					<a id="lossButton" class="col m6 s12 dropdown-button btn red" href="#" data-activates="loss" data-hover="true">Loss</a>
+					<ul id="loss" class="dropdown-content">
+						<li><a onclick="oneRound()">1 round</a></li>
+						<li><a onclick="twoRound()">2 rounds</a></li>
+						<li><a onclick="threeRound()">3 rounds</a></li>
+						<li><a onclick="fourRound()">4 rounds</a></li>
+						<li><a onclick="fiveRound()">5+ rounds</a></li>
 					</ul>
+				</div>
+				<!--
+				<div class="col s12" style="margin-top:50px;">
+					<button onclick="getMoney()" class="col s12 btn">Calculate</button>
+				</div>
+				-->
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<div class="divider"></div>
+					<table>
+						<thead>
+							<tr>
+								<th>Debug</th>
+								<th>Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Money</td>
+								<td id="moneyContainer"></td>
+							</tr>
+							<tr>
+								<td>Round Outcome</td>
+								<td id="infoContainer"></td>
+							</tr>
+							<tr>
+								<td>Next Round Money if lost</td>
+								<td id="nextContainer"></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -92,11 +117,9 @@
 	</div>
 </footer>
 <script>
-$(window).load(function(){
-    $('#loading').fadeOut(1500);
-    $('.load').fadeOut(1000);
-    Materialize.toast('Non-functional right now, only base layout!', 20000);
-});
+//$(window).load(function(){
+//    Materialize.toast('Non-functional right now, only base layout!', 20000);
+//});
 //How do I even javascript lol
 </script>
 </body>

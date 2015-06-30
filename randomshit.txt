@@ -1,0 +1,22 @@
+
+cts
+m4 3200
+vest 650
+vesthelm 1000
+kit 400
+nades 300 + 300 + 200 + 200
+5000-
+
+ts
+ak 2700
+armor 1000
+nades 1000
+
+FULL buy
+ak's / m4's + vesthelm + all nades
+
+MIN buy
+ak's / m4's + vesthelm
+
+AWP buy
+awp + vesthelm + p250
